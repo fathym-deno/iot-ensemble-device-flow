@@ -9,9 +9,8 @@
       "defaultExecutablePath": "/home/site/wwwroot/bin/linux/deno",
       "arguments": [
         "run",
-        "--allow-net",
-        "--allow-env",
-        "--allow-read",
+        "-A",
+        "--unstable",
         "worker.ts"
       ]
     }
