@@ -46,19 +46,19 @@ jobs:
       - name: Deno Build
         run: deno task build
 
-      - name: Set Version
-        id: version
-        uses: paulhatch/semantic-version@v5.0.2
-        with:
-          tag_prefix: 'v'
-          major_pattern: '(MAJOR)'
-          minor_pattern: '(MINOR)'
-          version_format: ${{ steps.mainFormat.outputs.format || steps.prereleaseFormat.outputs.format }}
-          # namespace: ${{ steps.vars.outputs.currentBranch == env.MainBranch && null || steps.vars.outputs.currentBranch }}
-          # search_commit_body: false
-          bump_each_commit: true
-          user_format_type: 'json'
-          enable_prerelease_mode: ${{ steps.vars.outputs.currentBranch != env.MainBranch }}
+      # - name: Set Version
+      #   id: version
+      #   uses: paulhatch/semantic-version@v5.0.2
+      #   with:
+      #     tag_prefix: 'v'
+      #     major_pattern: '(MAJOR)'
+      #     minor_pattern: '(MINOR)'
+      #     version_format: ${{ steps.mainFormat.outputs.format || steps.prereleaseFormat.outputs.format }}
+      #     # namespace: ${{ steps.vars.outputs.currentBranch == env.MainBranch && null || steps.vars.outputs.currentBranch }}
+      #     # search_commit_body: false
+      #     bump_each_commit: true
+      #     user_format_type: 'json'
+      #     enable_prerelease_mode: ${{ steps.vars.outputs.currentBranch != env.MainBranch }}
 
       - name: Azure Functions Build
         run: |
@@ -80,7 +80,7 @@ jobs:
           package: ./
           publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
 
-      - name: Tag commit ${{ steps.version.outputs.version }}
-        run: |
-          git tag v${{ steps.version.outputs.version }} ${{ steps.commit.outputs.commit }}
-          git push origin v${{ steps.version.outputs.version }}
+      # - name: Tag commit ${{ steps.version.outputs.version }}
+      #   run: |
+      #     git tag v${{ steps.version.outputs.version }} ${{ steps.commit.outputs.commit }}
+      #     git push origin v${{ steps.version.outputs.version }}
