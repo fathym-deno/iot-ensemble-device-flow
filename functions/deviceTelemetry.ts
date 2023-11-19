@@ -14,6 +14,12 @@ async function handler(context: AzureFunctionsContext) {
   context.res!.Outputs = {
     signalRMessages: context.bindings!.signalRMessages,
   };
+
+  context.res! = {
+    body: {
+      Outputs: context.res!.Outputs,
+    },
+  };
 }
 
 export default {

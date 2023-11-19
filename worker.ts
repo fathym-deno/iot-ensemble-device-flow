@@ -8,8 +8,8 @@ import deviceTelemetryNegotiate from './functions/deviceTelemetryNegotiate.ts';
 const worker = new AzureFunctionsWorker([
   hello_world,
   deviceTelemetry,
+  deviceTelemetryListener,
   deviceTelemetryNegotiate,
-  //   deviceTelemetryListener,
 ]);
 
 await worker.run();
