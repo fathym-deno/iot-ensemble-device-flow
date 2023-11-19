@@ -1,0 +1,19 @@
+{
+  "version": "2.0",
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "[1.*, 3.0.0)"
+  },
+  "customHandler": {
+    "description": {
+      "defaultExecutablePath": "/home/site/wwwroot/bin/linux/deno",
+      "arguments": [
+        "run",
+        "--allow-net",
+        "--allow-env",
+        "--allow-read",
+        "worker.ts"
+      ]
+    }
+  }
+}
