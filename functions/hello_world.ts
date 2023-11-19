@@ -1,9 +1,9 @@
-import type { AzureFunctionsContext } from "../deps.ts";
+import type { AzureFunctionsContext } from '../deps.ts';
 
 async function handler(context: AzureFunctionsContext) {
   context.res = {
     status: 200,
-    body: `Welcome to deno ${Deno.version.deno} 🦕 in Azure Functions ⚡️!!!`
+    body: `Welcome back to deno ${Deno.version.deno} 🦕 in Azure Functions ⚡️!!!`,
   };
 }
 
@@ -11,9 +11,9 @@ export default {
   handler,
 
   // Name of the function
-  name: "hello_world",
+  name: 'hello_world',
 
-  // By default, it's an HTTP function. For other functions, add a `metadata` property 
+  // By default, it's an HTTP function. For other functions, add a `metadata` property
   // with the contents of function.json that describes the trigger and bindings.
   // https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-example
 };
