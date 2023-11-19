@@ -6,13 +6,8 @@
   },
   "customHandler": {
     "description": {
-      "defaultExecutablePath": "/home/site/wwwroot/bin/linux/deno",
-      "arguments": [
-        "run",
-        "-A",
-        "--unstable",
-        "worker.ts"
-      ]
+      "defaultExecutablePath": "bin/linux/worker",
+      "arguments": []
     }
   }
 }
