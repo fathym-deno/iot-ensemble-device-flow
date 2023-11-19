@@ -1,1 +1,6 @@
-{}
+{
+  "tasks": {
+    "deploy": "denofunc publish frg2-iot-devices-flow",
+    "start": "denofunc start"
+  }
+}

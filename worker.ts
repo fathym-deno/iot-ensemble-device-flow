@@ -1,11 +1,15 @@
-import { AzureFunctionsWorker } from "./deps.ts"
+import { AzureFunctionsWorker } from './deps.ts';
 
-import hello_world from "./functions/hello_world.ts";
-//import queue_trigger from './functions/queue_trigger.ts';
+import hello_world from './functions/hello_world.ts';
+import deviceTelemetry from './functions/deviceTelemetry.ts';
+import deviceTelemetryListener from './functions/deviceTelemetryListener.ts';
+import deviceTelemetryNegotiate from './functions/deviceTelemetryNegotiate.ts';
 
 const worker = new AzureFunctionsWorker([
   hello_world,
-  //queue_trigger
+  deviceTelemetry,
+  deviceTelemetryNegotiate,
+  //   deviceTelemetryListener,
 ]);
 
 await worker.run();

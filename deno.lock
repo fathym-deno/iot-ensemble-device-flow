@@ -65,6 +65,7 @@
     "https://deno.land/x/oak@v6.4.2/util.ts": "a6994ab0466760b4fcb230b131329aa5cebc54992007cda5e053b2a46f53f03e",
     "https://deno.land/x/path_to_regexp@v6.2.0/index.ts": "e94c04a44bbecac99ff2db2d831afe98b423e627b775cb57fc7935f848c64c51",
     "https://raw.githubusercontent.com/anthonychu/azure-functions-deno-worker/main/mod.ts": "dec931f43fa8f6d1b86501b7bc2bcea6aac7daf5d64c013af0a34de0b8afca67",
+    "https://raw.githubusercontent.com/anthonychu/azure-functions-deno-worker/main/types.ts": "0be33b6b028e68fdf3dec02c9def1ab23848e8c3bfe2d7a5ba436be69bcf11d6",
     "https://raw.githubusercontent.com/anthonychu/azure-functions-deno-worker/main/worker_deps.ts": "8c9fd1b9441c861f81af67ddf3d30f53be2d9b7edcf32700b958aa44f67dc804"
   }
 }
