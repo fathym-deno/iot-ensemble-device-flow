@@ -4,22 +4,42 @@ async function handler(context: AzureFunctionsContext) {
   context.log(`Telemetry item received: ${context.bindings.deviceTelemetry}`);
   // context.log(JSON.parse(context.bindings.deviceTelemetry));
 
-  context.bindings!.signalRMessages = context.bindings!.signalRMessages = [
+  context.bindings!.signalRMessages = [
     {
       target: 'telemetry',
       arguments: [JSON.parse(context.bindings.deviceTelemetry)],
     },
   ];
 
-  context.res!.Outputs = {
-    signalRMessages: context.bindings!.signalRMessages,
-  };
+  // context.res!.Outputs = {
+  //   signalRMessages: context.bindings!.signalRMessages,
+  // };
 
-  context.res! = {
-    body: {
-      Outputs: context.res!.Outputs,
-    },
-  };
+  // context.res! = {
+  //   body: {
+  //     Outputs: context.res!.Outputs,
+  //   },
+  // };
+
+  // return {
+  //   Outputs: {
+  //     signalRMessages: [
+  //       {
+  //         target: 'telemetry',
+  //         arguments: [JSON.parse(context.bindings.deviceTelemetry)],
+  //       },
+  //     ],
+  //   },
+  // };
+
+  // return {
+  //   signalRMessages: [
+  //     {
+  //       target: 'telemetry',
+  //       arguments: [JSON.parse(context.bindings.deviceTelemetry)],
+  //     },
+  //   ],
+  // };
 }
 
 export default {
