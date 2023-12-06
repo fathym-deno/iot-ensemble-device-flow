@@ -1,8 +1,0 @@
-{
-  "tasks": {
-    "build": "deno task generate",
-    "deploy": "denofunc publish frg2-iot-devices-flow",
-    "generate": "deno run -A --unstable https://raw.githubusercontent.com/fathym-deno/azure-functions-deno-worker/main/denofunc.ts generateexe",
-    "start": "denofunc start"
-  }
-}
