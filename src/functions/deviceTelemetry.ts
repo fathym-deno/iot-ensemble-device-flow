@@ -4,6 +4,8 @@ export async function deviceTelemetry(
   messages: unknown | unknown[],
   context: InvocationContext
 ): Promise<void> {
+  context.log(`Starting processing of received device messages`);
+
   if (!Array.isArray(messages)) {
     messages = [messages];
   }
@@ -12,16 +14,19 @@ export async function deviceTelemetry(
     context.log(`Processing ${messages.length} device messages`);
 
     const signalRMessages = messages.map((message) => {
+      context.log('Processing message', message);
+
       return {
         target: 'telemetry',
         arguments: [message],
       };
     });
-    for (const message of messages) {
-      context.log('Event hub message:', message);
-    }
+
+    context.log('Sending messages to SignalR');
 
     context.extraOutputs.set('signalRMessages', signalRMessages);
+
+    context.log('Messages queued for sending to SignalR');
   }
 }
 
