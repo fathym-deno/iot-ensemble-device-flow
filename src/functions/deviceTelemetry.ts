@@ -39,7 +39,7 @@ const signalrOutput = output.generic({
 
 app.eventHub('deviceTelemetry', {
   connection: 'IoTHubEndpoint',
-  eventHubName: 'fathym-res-group-1-iot-hu',
+  eventHubName: 'fathym-res-group-2-iot-hu',
   cardinality: 'many',
   extraOutputs: [signalrOutput],
   handler: deviceTelemetry,
